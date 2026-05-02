@@ -19,7 +19,7 @@ const POCETNO_STANJE: StanjeKalkulatora = {
 
 export default function Kalkulator() {
   const [stanje, setStanje] = useState<StanjeKalkulatora>(POCETNO_STANJE)
-  const [slika, setSlika] = useState<string | null>(null)
+const [slika, setSlika] = useState<string | null>('/kal.png')
   const inputSlikaRef = useRef<HTMLInputElement>(null)
 
   const handleUnos = (polje: 'broj1' | 'broj2', vrijednost: string) => {
@@ -69,7 +69,7 @@ export default function Kalkulator() {
     <div className="kalkulator-wrapper">
       <div className="kalkulator-header">
         <div className="kalkulator-header-lijevo">
-          <span className="kalkulator-oznaka">KALKULATOR</span>
+          <span className="kalkulator-oznaka">KOPRE NEDRI KALKULATOR</span>
           <h1 className="kalkulator-naslov">
             {rezultat?.vrijednost !== null && rezultat !== null && aktivnaOp
               ? `${broj1} ${aktivnaOp} ${broj2}`
