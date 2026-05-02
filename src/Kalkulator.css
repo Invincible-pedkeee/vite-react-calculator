@@ -1,0 +1,254 @@
+.kalkulator-wrapper {
+  width: 100%;
+  max-width: 460px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 36px 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Header */
+.kalkulator-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.kalkulator-header-lijevo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+}
+
+.kalkulator-oznaka {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--akcent);
+  text-transform: uppercase;
+}
+
+.kalkulator-naslov {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--tekst);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 1.3em;
+  margin: 0;
+}
+
+/* Placeholder za sliku */
+.slika-placeholder {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  border: 1.5px dashed var(--akcent);
+  background: var(--povrsina-2);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.slika-placeholder span {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: var(--akcent);
+  letter-spacing: 0.05em;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.slika-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Unosi */
+.unosi-red {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.unos-grupa {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.unos-labela {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--tekst-mutno);
+  text-transform: uppercase;
+}
+
+.unos-polje {
+  width: 100%;
+  background: var(--povrsina-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--tekst);
+  font-family: 'Space Mono', monospace;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 13px 15px;
+  outline: none;
+  transition: border-color 0.15s;
+  box-sizing: border-box;
+}
+
+.unos-polje::placeholder {
+  color: #5a2222;
+}
+
+.unos-polje:focus {
+  border-color: var(--akcent);
+}
+
+.unos-razdjelnik {
+  width: 1px;
+  height: 52px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+/* Operacije */
+.operacije-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.op-dugme {
+  background: var(--povrsina-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--tekst);
+  cursor: pointer;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+}
+
+.op-dugme:hover {
+  border-color: var(--akcent);
+}
+
+.op-dugme:active {
+  transform: scale(0.97);
+}
+
+.op-dugme--aktivan {
+  background: var(--akcent);
+  border-color: var(--akcent);
+  color: #fff;
+}
+
+.op-simbol {
+  font-family: 'Space Mono', monospace;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.op-naziv {
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.op-dugme--aktivan .op-naziv {
+  opacity: 1;
+}
+
+/* Rezultat */
+.rezultat-box {
+  background: var(--povrsina-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: border-color 0.2s;
+  min-height: 84px;
+  justify-content: center;
+}
+
+.rezultat-box--aktivan {
+  border-color: var(--akcent);
+}
+
+.rezultat-box--greska {
+  border-color: var(--opasnost);
+}
+
+.rezultat-labela {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--tekst-mutno);
+}
+
+.rezultat-vrijednost {
+  font-family: 'Space Mono', monospace;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--akcent);
+  word-break: break-all;
+}
+
+.rezultat-vrijednost--prazno {
+  color: #5a2222;
+}
+
+.rezultat-vrijednost--greska {
+  color: var(--opasnost);
+  font-size: 15px;
+}
+
+/* Reset */
+.reset-dugme {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--tekst-mutno);
+  cursor: pointer;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.reset-dugme:hover {
+  border-color: var(--opasnost);
+  color: var(--opasnost);
+}
