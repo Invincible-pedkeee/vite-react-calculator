@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react'
-import type { Operacija, StanjeKalkulatora } from '../../types/Kalkulator'
+import type { Operacija, StanjeKalkulatora } from './Kalkulator.ts'
 import { izracunaj, formatirajRezultat } from './kalkulatorLogika'
-import './Kalkulator.css'
+import './Kalkulator'
 
 const OPERACIJE: { simbol: Operacija; naziv: string }[] = [
   { simbol: '+', naziv: 'Saberi' },
