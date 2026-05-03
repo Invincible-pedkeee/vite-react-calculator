@@ -35,7 +35,7 @@ Mini kalkulator koji podržava četiri osnovne aritmetičke operacije. Projekat 
 ### Koraci
 
 ```bash
-git clone https://github.com/TVOJE_IME/vite-react-calculator.git
+git clone https://github.com/Invincible-pedkeee/vite-react-calculator.git
 cd vite-react-calculator
 npm install
 npm run dev
