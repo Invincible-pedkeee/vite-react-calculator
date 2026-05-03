@@ -1,4 +1,4 @@
-import type { Operacija, RezultatKalkulacije } from './Kalkulator'
+import type { Operacija, RezultatKalkulacije } from '../../types/Kalkulator'
 
 export function izracunaj(
   broj1: number,

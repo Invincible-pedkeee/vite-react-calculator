@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import type { Operacija, StanjeKalkulatora } from './Kalkulator.ts'
+import type { Operacija, StanjeKalkulatora } from '../../types/Kalkulator'
 import { izracunaj, formatirajRezultat } from './kalkulatorLogika'
 import './Kalkulator.css'
 
