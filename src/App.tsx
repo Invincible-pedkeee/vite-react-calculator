@@ -1,4 +1,4 @@
-import Kalkulator from './Kalkulator.tsx'
+import Kalkulator from './components/Calculator/Kalkulator'
 
 function App() {
   return <Kalkulator />

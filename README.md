@@ -1,6 +1,6 @@
-# Kalkulator
+# vite-react-calculator
 
-Jednostavna web aplikacija razvijena u sklopu domaceg zadatka predmeta **OSNOVE DISTRIBUIRANOG PROGRAMIRANJA**.
+Jednostavna web aplikacija kalkulatora razvijena u sklopu domaćeg zadatka predmeta **Nadzor i kontrola u distribuiranim sistemima**.
 
 ## 🔗 Live verzija
 
@@ -8,16 +8,15 @@ Jednostavna web aplikacija razvijena u sklopu domaceg zadatka predmeta **OSNOVE 
 
 ## O projektu
 
-Aplikacija predstavlja mini kalkulator koji podržava četiri osnovne aritmetičke operacije. Projekat je realizovan koristeći moderne web tehnologije — React, Vite i TypeScript — uz automatski deployment putem Vercel platforme.
+Mini kalkulator koji podržava četiri osnovne aritmetičke operacije. Projekat je realizovan koristeći React, Vite i TypeScript, uz automatski deployment putem Vercel platforme.
 
 ## Funkcionalnosti
 
 - Sabiranje, oduzimanje, množenje i dijeljenje
-- Zasebna validacija za svako polje — aplikacija javlja koji broj nedostaje
+- Validacija unosa — aplikacija javlja koji broj nedostaje
 - Zaštita od dijeljenja nulom
 - Prikaz izvršene operacije u zaglavlju
 - Dugme za resetovanje svih polja
-- Mogućnost dodavanja vlastite slike u zaglavlje
 
 ## Tehnologije
 
@@ -56,10 +55,13 @@ npm run build
 vite-react-calculator/
 ├── public/
 ├── src/
-│   ├── Kalkulator.tsx       # Glavna komponenta
-│   ├── Kalkulator.css       # Stilovi
-│   ├── kalkulatorLogika.ts  # Logika računanja
-│   ├── Kalkulator.ts        # TypeScript tipovi
+│   ├── components/
+│   │   └── Calculator/
+│   │       ├── Kalkulator.tsx       # Glavna komponenta
+│   │       ├── Kalkulator.css       # Stilovi
+│   │       └── kalkulatorLogika.ts  # Logika računanja
+│   ├── types/
+│   │   └── Kalkulator.ts            # TypeScript tipovi
 │   ├── App.tsx
 │   ├── main.tsx
 │   └── index.css
@@ -70,4 +72,4 @@ vite-react-calculator/
 
 ## CI/CD
 
-Svaki push na `main` granu automatski pokreće novi deployment na Vercel platformi.
+Svaki push na `main` granu automatski pokreće novi deployment na Vercel platformi putem GitHub integracije.
